@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <style>
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: red;
+        }
+
+        header {
+            background-color: green;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid green;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Canelo Alvarez shop</h1>
+        <p>Lets cop some champ!!!</p>
+    </header>
+
+    <div id="product-container">
+        <!-- Products will be dynamically added here using JavaScript -->
+    </div>
+
+    <script>
+        // Dummy product data (replace this with your actual product data)
+        const products = [
+            { name: 'Buy now!!!', price: 59.99, image: 'Canelo.jpg' },
+            { name: 'Product 2', price: 39.99, image: 'black.jpg' },
+            { name: 'Product 3', price: 59.99, image: 'product3.jpg' },
+            // Add more products as needed
+        ];
+
+        // Function to create product elements and add them to the page
+        function renderProducts() {
+            const container = document.getElementById('product-container');
+
+            products.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('product');
+
+                const imageElement = document.createElement('img');
+                imageElement.src = product.image;
+                imageElement.alt = product.name;
+
+                const nameElement = document.createElement('h3');
+                nameElement.textContent = product.name;
+
+                const priceElement = document.createElement('p');
+                priceElement.textContent = `$${product.price.toFixed(2)}`;
+
+                productElement.appendChild(imageElement);
+                productElement.appendChild(nameElement);
+                productElement.appendChild(priceElement);
+
+                container.appendChild(productElement);
+            });
+        }
+
+        // Call the function to render products when the page loads
+        window.onload = renderProducts;
+    </script>
+
+</body>
+</html>
