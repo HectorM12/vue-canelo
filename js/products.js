@@ -2,11 +2,12 @@ const app = Vue.createApp({
     data() {
         return {
             products: [
-                { name: 'Product 1', price: 19.99, image: 'img/black.jpg' },
-                { name: 'Product 2', price: 29.99, image: 'img/Canelo.jpg' },
+                { name: 'Product 1', price: 49.99, image: 'img/black.jpg' },
+                { name: 'Product 2', price: 49.99, image: 'img/Canelo.jpg' },
                 { name: 'Product 3', price: 39.99, image: 'img/Goat.jpg' },
-                { name: 'Product 4', price: 39.99, image: 'img/product3.jpg' }, 
-                { name: 'Product 5', price: 39.99, image: 'img/product3.jpg' } 
+                { name: 'Product 4', price: 29.99, image: 'img/Hat.jpg' }, 
+                { name: 'Product 5', price: 59.99, image: 'img/Hoddie.jpg' }, 
+                { name: 'Product 5', price: 59.99, image: 'img/Red.jpg' }
             ]
         }
     },
